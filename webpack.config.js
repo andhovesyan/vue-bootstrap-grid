@@ -2,34 +2,43 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    index: './src/index.js',
+    'bs-grid': './src/bs_grid/index.js',
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: '[name].js',
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    modules: [path.join(__dirname, 'node_modules')],
   },
   module: {
-    loaders: [
-      {
-        test: /\.vue$/,
-        loader: 'vue'
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
-        query: {
-          name: '[name].[ext]?[hash]'
-        }
+    loaders: [{
+      test: /\.vue$/,
+      loader: 'vue'
+    },
+    {
+      test: /\.js$/,
+      loader: 'babel',
+      exclude: /node_modules/
+    },
+    {
+      test: /\.(png|jpg|gif|svg)$/,
+      loader: 'file',
+      query: {
+        name: '[name].[ext]?[hash]'
       }
-    ]
+    },
+    {
+      test: /\.scss$/,
+      loaders: [
+        "style",
+        "css",
+        "sass",
+      ]
+    }]
   },
   devServer: {
     historyApiFallback: true,
