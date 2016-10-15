@@ -10,6 +10,8 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: '[name].js',
+    library: 'bs-grid',
+    libraryTarget: 'umd',
   },
   resolveLoader: {
     modules: [path.join(__dirname, 'node_modules')],
