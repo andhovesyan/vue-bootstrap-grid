@@ -1,17 +1,17 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
+
+var libraryName = 'bs-grid';
+var outputFile = libraryName + '.js';
 
 module.exports = {
-  entry: {
-    index: './src/index.js',
-    'bs-grid': './src/bs_grid/index.js',
-  },
+  entry: __dirname + '/src/bs_grid/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: '[name].js',
-    library: 'bs-grid',
+    path: __dirname + '/dist',
+    filename: outputFile,
+    library: libraryName,
     libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   resolveLoader: {
     modules: [path.join(__dirname, 'node_modules')],
@@ -51,7 +51,6 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
