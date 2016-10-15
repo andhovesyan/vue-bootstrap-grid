@@ -1,5 +1,5 @@
-import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
-import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+// import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+// import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
 import bsGrid from './bs_grid/bs-grid.vue';
 import bsRow from './bs_grid/bs-row.vue';
