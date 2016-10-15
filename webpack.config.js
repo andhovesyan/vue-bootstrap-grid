@@ -1,15 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
 
-var libraryName = 'bs-grid';
-var outputFile = libraryName + '.js';
-
 module.exports = {
-  entry: __dirname + '/src/bs_grid/index.js',
+  entry: './src/index.js',
   output: {
-    path: __dirname + '/dist',
-    filename: outputFile,
-    library: libraryName,
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'bs_grid.js',
+    library: 'bs-grid',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -46,7 +44,6 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {

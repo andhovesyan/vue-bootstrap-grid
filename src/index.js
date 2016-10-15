@@ -1,11 +1,20 @@
-import Vue from 'vue';
-import bsGrid from './bs_grid';
+import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
-import App from './App.vue';
+import bsGrid from './bs_grid/bs-grid.vue';
+import bsRow from './bs_grid/bs-row.vue';
+import bsCol from './bs_grid/bs-col.vue';
 
-Vue.use(bsGrid);
+const plugin = {
+  install(Vue, options) {
+    Vue.component('bs-grid', bsGrid);
+    Vue.component('bs-row', bsRow);
+    Vue.component('bs-col', bsCol);
+  },
+};
 
-new Vue({
-    el: '#app',
-    render: h => h(App)
-});
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(plugin);
+}
+
+export default plugin;
