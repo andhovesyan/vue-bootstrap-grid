@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'bs_grid.js',
+    filename: 'bs-grid.js',
     library: 'bs-grid',
     libraryTarget: 'umd',
     umdNamedDefine: true
