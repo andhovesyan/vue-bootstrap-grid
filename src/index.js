@@ -1,4 +1,3 @@
-import 'bootstrap/scss/bootstrap-reboot.scss';
 import 'bootstrap/scss/bootstrap-grid.scss';
 
 import bsGrid from './bs_grid/bs-grid.vue';
