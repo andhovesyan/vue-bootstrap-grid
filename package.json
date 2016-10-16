@@ -9,7 +9,7 @@
   "dependencies": {
     "vue": "^2.0.3"
   },
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
