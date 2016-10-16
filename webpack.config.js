@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bs-grid.js',
     library: 'bs-grid',
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
