@@ -6,8 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'bs-grid.js',
-    library: 'bs-grid',
+    filename: 'vue-bs-grid.js',
+    library: 'vue-bs-grid',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
