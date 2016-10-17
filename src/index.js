@@ -2,14 +2,10 @@ import bsGrid from './bs_grid/bs-grid.vue';
 import bsRow from './bs_grid/bs-row.vue';
 import bsCol from './bs_grid/bs-col.vue';
 
-const plugin = {
+const VueBSGrid = {
   bsGrid,
   bsRow,
   bsCol,
 };
 
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(plugin);
-}
-
-export default plugin;
+module.exports = VueBSGrid;
