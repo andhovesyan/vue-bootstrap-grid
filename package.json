@@ -36,7 +36,7 @@
     "webpack": "2.1.0-beta.22",
     "webpack-dev-server": "^2.1.0-beta.9"
   },
-  "version": "0.0.16",
+  "version": "0.0.17",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hovesyan/vue-bootstrap-grid.git"
