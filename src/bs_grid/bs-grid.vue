@@ -12,7 +12,6 @@ export default {
 
   computed: {
     cclass() {
-      console.log(this.$slots);
       return (this.fluid) ? 'container-fluid' : 'container';
     }
   }
