@@ -12,21 +12,21 @@ module.exports = {
     umdNamedDefine: true,
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    modules: [path.join(__dirname, 'node_modules')],
   },
   module: {
     loaders: [{
       test: /\.vue$/,
-      loader: 'vue'
+      loader: 'vue-loader'
     },
     {
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       exclude: /node_modules|dist/
     },
     {
       test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file',
+      loader: 'file-loader',
       query: {
         name: '[name].[ext]?[hash]'
       }
